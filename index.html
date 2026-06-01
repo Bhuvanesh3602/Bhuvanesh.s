@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bhuvanesh S - Full Stack Developer | AI/DS Enthusiast | Building innovative solutions">
+    <meta name="theme-color" content="#0f0f23">
+    <title>Bhuvanesh S - Portfolio</title>
+    
+    <!-- Preload fonts for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader-wrapper" id="loaderWrapper">
+        <div class="loader">
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">BS</span>
+            </div>
+            
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="stars"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-greeting">
+                    <span class="greeting-emoji">👋</span>
+                    <span>Hey, I'm</span>
+                </div>
+                <h1 class="hero-title">Bhuvanesh S</h1>
+                <p class="hero-subtitle">Full Stack Developer × AI/Data Science Enthusiast × Problem Solver</p>
+                <p class="hero-description">
+                    I build innovative digital solutions combining modern web technologies, machine learning, and cybersecurity. Let's create something extraordinary together.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="https://github.com/Bhuvanesh2024" target="_blank" class="btn btn-secondary">View GitHub</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <span class="card-icon">💻</span>
+                </div>
+                <div class="floating-card card-2">
+                    <span class="card-icon">🚀</span>
+                </div>
+                <div class="floating-card card-3">
+                    <span class="card-icon">⚡</span>
+                </div>
+                <div class="hero-avatar">
+                    <div class="avatar-glow"></div>
+                    <div class="avatar-placeholder">BS</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a <strong>B.Tech AI & Data Science student</strong> at Sri Eshwar College of Engineering with a passion for building scalable applications and solving complex problems. My journey spans full-stack development, cybersecurity, and machine learning.
+                    </p>
+                    <p>
+                        With a <strong>CGPA of 8.00</strong> and consistent achievement across competitive platforms, I've developed expertise in architecting systems, optimizing performance, and delivering production-ready solutions.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or competing in coding challenges. I'm driven by the mission to create technology that makes an impact.
+                    </p>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">285+</div>
+                        <div class="stat-label">LeetCode Problems</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Top 9.8%</div>
+                        <div class="stat-label">LeetCode Rank</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Major Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category" data-category="languages">
+                    <div class="category-header">
+                        <span class="category-icon">🔤</span>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Core CS -->
+                <div class="skill-category" data-category="core">
+                    <div class="category-header">
+                        <span class="category-icon">⚙️</span>
+                        <h3>Core CS</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">DSA</span>
+                        <span class="skill-tag">Dynamic Programming</span>
+                        <span class="skill-tag">DBMS</span>
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">OS Basics</span>
+                        <span class="skill-tag">Computer Networks</span>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skill-category" data-category="web">
+                    <div class="category-header">
+                        <span class="category-icon">🌐</span>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">JWT</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-category" data-category="database">
+                    <div class="category-header">
+                        <span class="category-icon">🗄️</span>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+
+                <!-- ML & Data -->
+                <div class="skill-category" data-category="ml">
+                    <div class="category-header">
+                        <span class="category-icon">🤖</span>
+                        <h3>ML & Data Science</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Data Preprocessing</span>
+                        <span class="skill-tag">Model Training</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Tools -->
+                <div class="skill-category" data-category="tools">
+                    <div class="category-header">
+                        <span class="category-icon">🛠️</span>
+                        <h3>Frameworks & Tools</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: Sentinel -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🛡️</div>
+                        <div class="project-meta">
+                            <span class="project-year">2026</span>
+                            <span class="project-status">Live</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">AI-Powered Threat Detection System</h3>
+                    <p class="project-subtitle">Sentinel</p>
+                    <p class="project-description">
+                        Real-time threat detection using AI-based anomaly detection. Built backend services, REST APIs, and dashboards for monitoring alerts and security insights.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">AI/ML</span>
+                        <span class="tech-badge">REST APIs</span>
+                        <span class="tech-badge">Dashboard</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Bhuvanesh2024/Sentinel.git" target="_blank" class="project-link">
+                            <span>View Code</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: XXE & XLSX -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🔐</div>
+                        <div class="project-meta">
+                            <span class="project-year">2025</span>
+                            <span class="project-status">Complete</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">XXE & XLSX Injection Testing Tool</h3>
+                    <p class="project-subtitle">Security Vulnerability Framework</p>
+                    <p class="project-description">
+                        Python Flask & React.js vulnerability testing tool to simulate XXE and XLSX injection attacks with automated detection workflows.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Flask</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Security</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Bhuvanesh3602/XXE-XLSX-INJECTION-TOOL-.git" target="_blank" class="project-link">
+                            <span>View Code</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: TalentIQ -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">💼</div>
+                        <div class="project-meta">
+                            <span class="project-year">2025</span>
+                            <span class="project-status">Complete</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">TalentIQ - Interview Platform</h3>
+                    <p class="project-subtitle">Real-Time Coding Interviews</p>
+                    <p class="project-description">
+                        Full-stack interview platform with WebSocket real-time collaboration, secure authentication, and scalable backend for low-latency performance.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">React.js</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">MongoDB</span>
+                        <span class="tech-badge">WebSocket</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Bhuvanesh3602/TalentIQ-Interview.git" target="_blank" class="project-link">
+                            <span>View Code</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Experience & Education</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- Experience -->
+                <div class="timeline-item experience-item">
+                    <div class="timeline-marker">
+                        <span class="marker-icon">💼</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="content-header">
+                            <h3 class="timeline-title">MERN Stack Development Intern</h3>
+                            <span class="timeline-date">2025</span>
+                        </div>
+                        <p class="timeline-subtitle">AlgoTutor</p>
+                        <p class="timeline-description">
+                            Developed a full-stack e-commerce application using MongoDB, Express.js, React.js, and Node.js. Implemented REST APIs, JWT-based authentication with role-based access control, and optimized database queries for improved performance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education 1 -->
+                <div class="timeline-item education-item">
+                    <div class="timeline-marker">
+                        <span class="marker-icon">🎓</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="content-header">
+                            <h3 class="timeline-title">B.Tech., AI & Data Science</h3>
+                            <span class="timeline-date">2024-2028</span>
+                        </div>
+                        <p class="timeline-subtitle">Sri Eshwar College of Engineering</p>
+                        <p class="timeline-description">
+                            <strong>CGPA: 8.00</strong> | Pursuing degree with focus on artificial intelligence, data science, and full-stack development.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education 2 -->
+                <div class="timeline-item education-item">
+                    <div class="timeline-marker">
+                        <span class="marker-icon">📚</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="content-header">
+                            <h3 class="timeline-title">HSC</h3>
+                            <span class="timeline-date">2022-2024</span>
+                        </div>
+                        <p class="timeline-subtitle">Government Higher Secondary School, Ottayalvilai</p>
+                        <p class="timeline-description">
+                            <strong>Score: 85.5%</strong> | Achieved excellent results with focus on science and mathematics.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education 3 -->
+                <div class="timeline-item education-item">
+                    <div class="timeline-marker">
+                        <span class="marker-icon">🏫</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="content-header">
+                            <h3 class="timeline-title">SSLC</h3>
+                            <span class="timeline-date">2021-2022</span>
+                        </div>
+                        <p class="timeline-subtitle">Government Higher Secondary School, Variyoor</p>
+                        <p class="timeline-description">
+                            <strong>Score: 74.4%</strong> | Strong foundation in core subjects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Achievements & Recognition</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-number">1</div>
+                    <div class="achievement-content">
+                        <h4>Top 9.8% LeetCode</h4>
+                        <p>Global ranking demonstrating strong algorithmic problem-solving skills</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-number">2</div>
+                    <div class="achievement-content">
+                        <h4>India Innovates 2026 Finalist</h4>
+                        <p>Developed AI-based cybersecurity solution for national competition</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-number">3</div>
+                    <div class="achievement-content">
+                        <h4>850+ Problems Solved</h4>
+                        <p>SkillRack platform - Strong focus on algorithmic optimization</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-number">4</div>
+                    <div class="achievement-content">
+                        <h4>HackerRank Certified</h4>
+                        <p>Problem Solving (Basic), SQL (Advanced), Python (Basic)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">☕</div>
+                    <h4>Java Programming</h4>
+                    <p>Sun Java - CSC Grade A (Excellent) • 2024</p>
+                    <a href="https://drive.google.com/file/d/1wmdeHw2kIE9iyJNH5dDYuo-NFStT3VSS/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">🔤</div>
+                    <h4>C Intermediate</h4>
+                    <p>Mastering Data Structures with C and C++ • 2025</p>
+                    <a href="https://drive.google.com/file/d/1T6GuFiL-s3gmHg_EWzvsx-zBRHp4rICZ/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">⚛️</div>
+                    <h4>MERN Stack Development</h4>
+                    <p>Udemy Professional Course • 2025</p>
+                    <a href="https://drive.google.com/file/d/1-QpwjxI3NkjR3rp2HezFbJM_wHSP1pMf/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">🗄️</div>
+                    <h4>SQL Advanced</h4>
+                    <p>HackerRank Professional Certification • 2025</p>
+                    <a href="https://drive.google.com/file/d/1UXmuV79ooNNnJy29aNWqFkl52P7Ta-Um/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">🤖</div>
+                    <h4>Large Language Models</h4>
+                    <p>IBM SkillsBuild Introduction Course • 2026</p>
+                    <a href="https://drive.google.com/file/d/1wudFr5K4gHSF3xXaCbklMUFAhtN0Qjhd/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">🤗</div>
+                    <h4>Hugging Face Agent Course</h4>
+                    <p>Advanced AI/ML Training • 2026</p>
+                    <a href="https://drive.google.com/file/d/1GF1ZZxvOFWapiTPRT7sBAFoykreCaQkM/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coding Profiles Section -->
+    <section class="coding-profiles">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Coding Profiles</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="profiles-grid">
+                <a href="https://leetcode.com/u/bhuvanesh3602/" target="_blank" class="profile-card leetcode-card">
+                    <div class="profile-icon">💻</div>
+                    <h4>LeetCode</h4>
+                    <p>285+ Problems Solved</p>
+                    <span class="profile-stat">Global Rank: Top 9.8%</span>
+                </a>
+
+                <a href="https://www.codechef.com/users/bhuvanesh3602" target="_blank" class="profile-card codechef-card">
+                    <div class="profile-icon">🏆</div>
+                    <h4>CodeChef</h4>
+                    <p>180+ Problems Solved</p>
+                    <span class="profile-stat">Competitive Programming</span>
+                </a>
+
+                <a href="https://www.skillrack.com/faces/resume.xhtml?id=514374&key=364011913e190214b6f88ac02d9c221322ad54d4e" target="_blank" class="profile-card skillrack-card">
+                    <div class="profile-icon">🚀</div>
+                    <h4>SkillRack</h4>
+                    <p>850+ Problems Solved</p>
+                    <span class="profile-stat">DSA Optimization</span>
+                </a>
+
+                <a href="https://www.hackerrank.com/profile/bhuvanesh_s3602" target="_blank" class="profile-card hackerrank-card">
+                    <div class="profile-icon">⭐</div>
+                    <h4>HackerRank</h4>
+                    <p>Certified Professional</p>
+                    <span class="profile-stat">Multiple Certifications</span>
+                </a>
+
+                <a href="https://kaggle.com/bhuvanesh3602" target="_blank" class="profile-card kaggle-card">
+                    <div class="profile-icon">📊</div>
+                    <h4>Kaggle</h4>
+                    <p>ML Competitions</p>
+                    <span class="profile-stat">Rank: 1678 / 3870</span>
+                </a>
+
+                <a href="https://github.com/Bhuvanesh2024" target="_blank" class="profile-card github-card">
+                    <div class="profile-icon">🐙</div>
+                    <h4>GitHub</h4>
+                    <p>Open Source Contributor</p>
+                    <span class="profile-stat">Portfolio & Projects</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="contact-content">
+                <p class="contact-text">
+                    I'm always excited to collaborate on innovative projects and explore new opportunities. Whether you have a question or just want to say hello, feel free to reach out!
+                </p>
+
+                <div class="contact-methods">
+                    <a href="mailto:bhuvanesh.s2024aids@sece.ac.in" class="contact-method">
+                        <span class="method-icon">📧</span>
+                        <div>
+                            <div class="method-label">Email</div>
+                            <div class="method-value">bhuvanesh.s2024aids@sece.ac.in</div>
+                        </div>
+                    </a>
+
+                    <a href="tel:+917418497703" class="contact-method">
+                        <span class="method-icon">📱</span>
+                        <div>
+                            <div class="method-label">Phone</div>
+                            <div class="method-value">+91 7418497703</div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/bhuvanesh5959/" target="_blank" class="contact-method">
+                        <span class="method-icon">💼</span>
+                        <div>
+                            <div class="method-label">LinkedIn</div>
+                            <div class="method-value">Connect on LinkedIn</div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/Bhuvanesh2024" target="_blank" class="contact-method">
+                        <span class="method-icon">🐙</span>
+                        <div>
+                            <div class="method-label">GitHub</div>
+                            <div class="method-value">View My Projects</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/Bhuvanesh2024" target="_blank" class="social-icon" title="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bhuvanesh5959/" target="_blank" class="social-icon" title="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.731-2.004 1.438-.103.25-.129.599-.129.948v5.419h-3.554s.05-8.736 0-9.646h3.554v1.364c.429-.659 1.191-1.599 2.905-1.599 2.12 0 3.714 1.386 3.714 4.365v5.516zM5.337 9.433c-1.144 0-1.915-.759-1.915-1.71 0-.955.768-1.71 1.959-1.71 1.188 0 1.914.759 1.939 1.71 0 .951-.751 1.71-1.983 1.71zm1.581 11.019H3.716V9.806h3.202v10.646zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon" title="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7s1.5 5.5-5 7.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>Designed & Built with <span class="heart">❤️</span> by Bhuvanesh S</p>
+                <p class="footer-year">© 2026. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+</body>
+</html>
