@@ -480,36 +480,121 @@ section {
     justify-content: center;
 }
 
+/* ── Avatar wrapper & all surrounding animations ── */
+.hero-avatar-wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Expanding pulse rings */
+.av-pulse {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid rgba(99, 102, 241, 0.55);
+    animation: avPulse 3.6s ease-out infinite;
+    pointer-events: none;
+}
+.av-pulse-1 { animation-delay: 0s; }
+.av-pulse-2 { animation-delay: 1.2s; }
+.av-pulse-3 { animation-delay: 2.4s; }
+
+@keyframes avPulse {
+    0%   { transform: scale(1);   opacity: 0.75; border-color: rgba(99, 102, 241, 0.55); }
+    100% { transform: scale(2);   opacity: 0;    border-color: rgba(99, 102, 241, 0); }
+}
+
+/* Counter-rotating dashed rings */
+.av-spin-ring {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.av-ring-outer {
+    width: 376px;
+    height: 376px;
+    border: 1.5px dashed rgba(99, 102, 241, 0.35);
+    animation: avSpin 14s linear infinite;
+}
+
+.av-ring-mid {
+    width: 344px;
+    height: 344px;
+    border: 1.5px dashed rgba(236, 72, 153, 0.35);
+    animation: avSpin 9s linear infinite reverse;
+}
+
+@keyframes avSpin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* Orbiting glowing dots */
+.av-orbit {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.av-orbit-1 {
+    width: 344px;
+    height: 344px;
+    animation: avOrbit 5s linear infinite;
+}
+
+.av-orbit-2 {
+    width: 376px;
+    height: 376px;
+    animation: avOrbit 8s linear infinite reverse;
+    animation-delay: -4s;
+}
+
+@keyframes avOrbit {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.av-dot {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    box-shadow: 0 0 18px rgba(99, 102, 241, 0.8), 0 0 6px rgba(99, 102, 241, 0.5);
+}
+
+.av-dot.av-dot-pink {
+    width: 11px;
+    height: 11px;
+    top: -5.5px;
+    background: linear-gradient(135deg, var(--accent-tertiary), var(--accent-secondary));
+    box-shadow: 0 0 14px rgba(236, 72, 153, 0.8), 0 0 5px rgba(236, 72, 153, 0.5);
+}
+
+/* Avatar circle */
 .hero-avatar {
     position: relative;
     width: 300px;
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: var(--shadow-md), 0 0 60px rgba(0, 217, 255, 0.18);
-    z-index: 1;
-    flex-shrink: 0;
-}
-
-.hero-avatar::after {
-    content: '';
-    position: absolute;
-    inset: -3px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
-    z-index: -1;
-    animation: glow 3s ease-in-out infinite;
-}
-
-.hero-avatar::before {
-    content: '';
-    position: absolute;
-    inset: -20px;
-    border-radius: 50%;
-    border: 1px solid rgba(99, 102, 241, 0.3);
+    box-shadow: var(--shadow-md), 0 0 40px rgba(99, 102, 241, 0.25);
     z-index: 2;
-    pointer-events: none;
-    animation: glow 3s ease-in-out infinite;
+    border: 3px solid transparent;
+    background:
+        linear-gradient(var(--bg-secondary), var(--bg-secondary)) padding-box,
+        linear-gradient(135deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary)) border-box;
 }
 
 .avatar-photo {
@@ -519,12 +604,6 @@ section {
     object-position: center 10%;
     border-radius: 50%;
     display: block;
-    position: relative;
-    z-index: 1;
-    border: 3px solid transparent;
-    background:
-        linear-gradient(var(--bg-secondary), var(--bg-secondary)) padding-box,
-        linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) border-box;
 }
 
 .avatar-glow {
@@ -533,7 +612,7 @@ section {
     border-radius: 50%;
     background: radial-gradient(circle, rgba(99, 102, 241, 0.22), rgba(236, 72, 153, 0.14), transparent 70%);
     filter: blur(35px);
-    z-index: -2;
+    z-index: -1;
     pointer-events: none;
 }
 
@@ -660,6 +739,80 @@ section {
 /* ========================================
    ABOUT
    ======================================== */
+
+/* Decorative animated orbs */
+.about {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(60px);
+}
+
+.about-orb-1 {
+    width: 420px;
+    height: 420px;
+    top: -100px;
+    right: -80px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.12), transparent 70%);
+    animation: floatOrb 9s ease-in-out infinite;
+}
+
+.about-orb-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -60px;
+    left: -60px;
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.1), transparent 70%);
+    animation: floatOrb 12s ease-in-out infinite reverse;
+}
+
+/* Entry animations */
+.about-text p {
+    opacity: 0;
+}
+
+.about-text.in-view p {
+    animation: aboutSlideIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.about-text.in-view p:nth-child(1) { animation-delay: 0.05s; }
+.about-text.in-view p:nth-child(2) { animation-delay: 0.2s; }
+.about-text.in-view p:nth-child(3) { animation-delay: 0.35s; }
+
+.about-stats .stat-card {
+    opacity: 0;
+}
+
+.about-stats.in-view .stat-card {
+    animation: statBounceIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.about-stats.in-view .stat-card:nth-child(1) { animation-delay: 0.1s; }
+.about-stats.in-view .stat-card:nth-child(2) { animation-delay: 0.22s; }
+.about-stats.in-view .stat-card:nth-child(3) { animation-delay: 0.34s; }
+.about-stats.in-view .stat-card:nth-child(4) { animation-delay: 0.46s; }
+
+@keyframes aboutSlideIn {
+    from { opacity: 0; transform: translateX(-36px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes statBounceIn {
+    from { opacity: 0; transform: translateY(28px) scale(0.88); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes floatOrb {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33%       { transform: translate(28px, -28px) scale(1.07); }
+    66%       { transform: translate(-18px, 18px) scale(0.94); }
+}
 
 .about-content {
     display: grid;
